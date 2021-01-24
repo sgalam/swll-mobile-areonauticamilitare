@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>SWLL Mobile</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="themes/mobile.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+
+</head>
+<body>
+
+<div data-role="header">
+  <a href="index.html" data-icon="delete">Cancel</a>
+  <h1>Edit Contact</h1>
+  <a href="index.html" data-icon="check">Save</a>
+</div>
+
+
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline">
+			<h1>
+{% for n in swll_data %}
+        <li>{{n.get_validity()}}</li>
+        <li><img src="{{n.get_url_image_uuid()}}" referrerpolicy="origin"></li>
+        <li>{{n.get_active()}}</li>
+
+{% endfor %}
+</h1>
+		</div>
+
+	</div>
+</body>
+</html>
+
