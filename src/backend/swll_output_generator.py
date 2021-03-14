@@ -23,4 +23,3 @@ class SWLL_Output:
         output = template.render()
         with open('/dist/index.html', 'w') as f:
             f.write(output)
-\
