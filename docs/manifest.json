@@ -7,7 +7,7 @@
     "description": "Visualizza rapidamente le carte SWLL dell'Areonautica Militare",
     "icons": [
         {
-          "src": "/icon.png",
+          "src": "/swll-mobile-areonauticamilitare/icon.png",
           "type": "image/png",
           "sizes": "192x192"
         }
