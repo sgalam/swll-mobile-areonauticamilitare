@@ -1,8 +1,14 @@
 {
     "name": "SWLL Mobile",
     "short_name": "SWLL Mobile",
-    "start_url": ".",
+    "start_url": "https://sgalam.github.io/swll-mobile-areonauticamilitare/",
     "display": "standalone",
     "background_color": "#fff",
-    "description": "Visualizza rapidamente le carte SWLL dell'Areonautica Militare"
+    "description": "Visualizza rapidamente le carte SWLL dell'Areonautica Militare",
+    "icons": [
+        {
+          "src": "/icon.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        }
 }
