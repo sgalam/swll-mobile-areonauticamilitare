@@ -1,88 +1,189 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <style>
+    
+    html {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .swll {
+      margin-top: 15px;
+      text-align: center;
+      line-height: 20px;
+      background-color: whitesmoke ;
+      font-size: 15px;
+      border-radius: 16px;
+      border: 3px solid black;
+      padding-bottom: 10px;
+
+    } 
+    .swll[swllactive=true] {
+    text-align: center;
+    line-height: 20px;
+    background-color: orangered ;
+    font-size: 15px;
+    border-radius: 16px;
+    border: 3px solid orangered;
+    }
+
+    .swll[swllactive=true] h1 {
+    text-align: center;
+    margin-top: -15px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    }
+
+  .swll[swllactive=true] span {
+      background-color: white;
+    } 
+
+
+
+    .swll-title {
+      text-align: center;
+    }
     .illustration img {
       width: 100%;
       max-width: 100%;
       max-height: 50%;
       display: block;
     }
-    .smallimage img {
-      height: 50px;
-      display: block;
-      background-color: blue;
+    div {
+        color: black;
+    }   
+    #header {
+      width: 100%;
+      padding: 0px;
+      vertical-align: middle;
+      height: 30px;
+      text-align: center;
+      background-color: orangered;
+      border: none;
+      margin: 0;
+    }
+    .header-inner {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    #errore {
+      margin: auto;
+      width: 60%;
+      border: 3px solid #73AD21;
+      padding: 10px;
+      text-align: center;
+      border-radius: 16px;
+    }
+    .footer {
+      width: 100%;
+      padding: 0px;
+      height: 30px;
+      text-align: center;
+      background-color: orangered;
+      border: none;
+    }
+
+    .description a:link {
+      color: black;
+    }
+   
+    #github {
+      max-height: 70%;
+      vertical-align: middle;
     }
   </style>
   <title>SWLL Mobile</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
- 	<link rel="stylesheet" href="themes/mobile.min.css" />
-	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
-  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
 
   
 
 </head>
 <body>
 
-
-	<div data-role="page" data-theme="a">
-    <div data-role="header">
-      <a href="index.html" data-icon="delete">Cancel</a>
-      <h1>Edit Contact</h1>
-      <a href="index.html" data-icon="check">Save</a>
+    <div id="header">
+      <div class="header-inner">SWLL Mobile
+      </br>
+      </div>
     </div>
-
-
-
-<div data-role="collapsible-set">
-  <div data-role="collapsible" data-fullscreen="true" >
-    <h3 class="smallimage">Validità: Validità: 24-01-2021 06:00 UTC <img src="73bb10f4-5e85-11eb-aad2-0242ac140002.gif"></h3>
-    <div class="illustration">
-    <img src="73bb10f4-5e85-11eb-aad2-0242ac140002.gif" referrerpolicy="origin">
-   </div>
-    </div>
+    <div class="description">
+      In questa pagina sono riportate le carte SWLL dal <a target="_blank" href="http://www.meteoam.it/prodotti_grafici/bassiStratisito">dell'A.M.</a>  aggiornate ogni 6 ore e riportate per una facile consultazione da smartphone.
   </div>
 
 
 
-<div data-role="collapsible-set">
-  <div data-role="collapsible" data-fullscreen="true" >
-    <h3 class="smallimage">Validità: Validità: 24-01-2021 12:00 UTC <img src="7521c50a-5e85-11eb-aad2-0242ac140002.gif"></h3>
-    <div class="illustration">
-    <img src="7521c50a-5e85-11eb-aad2-0242ac140002.gif" referrerpolicy="origin">
-   </div>
-    </div>
-  </div>
 
-
-
-<div data-role="collapsible-set">
-  <div data-role="collapsible" data-fullscreen="true" data-collapsed=false>
-    <h3 class="smallimage">Validità: Validità: 24-01-2021 18:00 UTC <img src="7624b228-5e85-11eb-aad2-0242ac140002.gif"></h3>
-    <div class="illustration">
-    <img src="7624b228-5e85-11eb-aad2-0242ac140002.gif" referrerpolicy="origin">
-   </div>
-    </div>
-  </div>
-
-
-
-<div data-role="collapsible-set">
-  <div data-role="collapsible" data-fullscreen="true" >
-    <h3 class="smallimage">Validità: Validità: 25-01-2021 00:00 UTC <img src="76b77f7c-5e85-11eb-aad2-0242ac140002.gif"></h3>
-    <div class="illustration">
-    <img src="76b77f7c-5e85-11eb-aad2-0242ac140002.gif" referrerpolicy="origin">
-   </div>
-    </div>
-  </div>
-
-
+  <div class="swll" >
     
-	</div>
+    <h3 class="swll-title">Validità: 14-03-2021 06:00 UTC</h3>
+
+     <div class="illustration">
+       <img src="am_charts/1.gif" referrerpolicy="origin">
+     </div>
+  </div>
+
+
+
+
+
+  <div class="swll" >
+    
+    <h3 class="swll-title">Validità: 14-03-2021 12:00 UTC</h3>
+
+     <div class="illustration">
+       <img src="am_charts/2.gif" referrerpolicy="origin">
+     </div>
+  </div>
+
+
+
+
+
+  <div class="swll" swllactive=true>
+    
+     <h1><span>CARTA ATTUALMENTE VALIDA</span></h1>
+    
+    <h3 class="swll-title">Validità: 14-03-2021 18:00 UTC</h3>
+
+     <div class="illustration">
+       <img src="am_charts/3.gif" referrerpolicy="origin">
+     </div>
+  </div>
+
+
+
+
+
+  <div class="swll" >
+    
+    <h3 class="swll-title">Validità: 15-03-2021 00:00 UTC</h3>
+
+     <div class="illustration">
+       <img src="am_charts/4.gif" referrerpolicy="origin">
+     </div>
+  </div>
+
+
+
+
+
+
+    <div class="footer">
+      Made with <span style="color: #e25555;">&#9829;</span> by Sgala - <a href="https://github.com/sgalam/swll-mobile-areonauticamilitare">Github <img id="github" src="github-logo.png"></a>
+    </div>
+
 </body>
 </html>
-
