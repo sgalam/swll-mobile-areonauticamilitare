@@ -8,11 +8,11 @@ class Swll_Images:
 
     aam_swll_url = 'http://www.meteoam.it/'
 
-    def __init__(self, validity_utc, image_link, active):
+    def __init__(self, validity_utc, image_link, active, image_id):
         self.validity_utc = validity_utc
         self.image_link = image_link
         self.active = active
-        self.uuid = str(uuid.uuid1())
+        self.image_id = image_id
 
     def get_validity(self):
         return self.validity_utc
@@ -23,14 +23,14 @@ class Swll_Images:
     def get_active(self):
         return self.active
 
-    def get_uuid(self):
-        return self.uuid
+    def get_image_id(self):
+        return self.image_id
 
-    def get_url_image_uuid(self):
-        return "%s.gif" % self.uuid
+    def get_url_image_id(self):
+        return "%s.gif" % self.image_id
 
     def __str__(self):
-        value = "Validity: %s \n\
+        value = "%s \n\
 Link: %s \n\
 Active: %s" % (
                      self.validity_utc, 

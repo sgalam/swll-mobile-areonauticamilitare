@@ -22,5 +22,5 @@ class SWLL_Fetch_Data:
     def fetch_and_save_local_image(url_image_remote, uri_image_local):
         file = SWLL_Fetch_Data.fetch_image(url_image_remote)
         print(url_image_remote)
-        with open('../dist/%s' % uri_image_local, 'wb') as f:
+        with open('/dist/am_charts/%s' % uri_image_local, 'wb') as f:
            f.write(file)       

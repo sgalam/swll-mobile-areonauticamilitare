@@ -13,6 +13,10 @@ services:
                 type: bind
                 source: ./src/
                 target: /app/
+            -
+                type: bind
+                source: ./dist/
+                target: /dist/
                 
         networks:
             - swllnet
