@@ -2,19 +2,18 @@ FROM python:3
 
 LABEL maintainer="Matteo Sgalaberni <sgala@sgala.com>"
 
-VOLUME /app/
-
 #RUN cd /app/ && ls -la
-
-COPY dummy.py .
-
-ADD resources_dist/icon.png /dist/
 
 
 WORKDIR /app/backend/
 
+COPY dummy.py /
+
+COPY init.sh /
+COPY init_dev.sh /
+
 COPY requirements.txt ./
 
-RUN mkdir -p /dist/am_charts/ && pip install --no-cache-dir -r requirements.txt
+RUN chmod u+x /init*.sh && pip install --no-cache-dir -r requirements.txt
 
-CMD [ "python", "main.py" ]
+CMD [ "/init.sh" ]

@@ -4,6 +4,9 @@ services:
     backend:
         build: ./docker_build_context/backend/
         image: swll_backend:latest
+        command: [
+            "/init.sh"
+        ]
         env_file: ./docker_env/sgala.env
         volumes:
             -
