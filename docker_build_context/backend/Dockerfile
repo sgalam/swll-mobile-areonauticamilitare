@@ -3,17 +3,18 @@ FROM python:3
 LABEL maintainer="Matteo Sgalaberni <sgala@sgala.com>"
 
 VOLUME /app/
-VOLUME /dist/
 
-WORKDIR /usr/src/app
-
-MKDIR /disk/am_charts/
-
-COPY requirements.txt ./
+#RUN cd /app/ && ls -la
 
 COPY dummy.py .
 
-RUN mkdir -p /disk/am_charts/ && pip install --no-cache-dir -r requirements.txt
+ADD resources_dist/icon.png /dist/
 
- 
-CMD [ "python", "./dummy.py" ]
+
+WORKDIR /app/backend/
+
+COPY requirements.txt ./
+
+RUN mkdir -p /dist/am_charts/ && pip install --no-cache-dir -r requirements.txt
+
+CMD [ "python", "main.py" ]
